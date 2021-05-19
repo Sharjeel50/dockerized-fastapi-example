@@ -7,17 +7,17 @@ from pydantic import BaseSettings, EmailStr
 
 class Settings(BaseSettings):
 
-    POSTGRES_SERVER: str = os.getenv['POSTGRES_SERVER']
-    POSTGRES_USER: str = os.environ['POSTGRES_USER']
-    POSTGRES_PASSWORD: str = os.environ['POSTGRES_PASSWORD']
-    POSTGRES_DB: str = os.environ['POSTGRES_DB']
+    # POSTGRES_SERVER: str = os.getenv['POSTGRES_SERVER']
+    # POSTGRES_USER: str = os.environ['POSTGRES_USER']
+    # POSTGRES_PASSWORD: str = os.environ['POSTGRES_PASSWORD']
+    # POSTGRES_DB: str = os.environ['POSTGRES_DB']
     S3_BUCKET_ADI: str = 'test'
     S3_BUCKET_L: str = 'test'
 
-    # POSTGRES_SERVER: str = "localhost:5431"
-    # POSTGRES_USER: str = "sj1234"
-    # POSTGRES_PASSWORD: str = "123"
-    # POSTGRES_DB: str = "sj1234"
+    POSTGRES_SERVER: str = "localhost:5431"
+    POSTGRES_USER: str = "sj1234"
+    POSTGRES_PASSWORD: str = "123"
+    POSTGRES_DB: str = "sj1234"
 
     # EMAIL_RESET_TOKEN_EXPIRE_HOURS: int = 48
 
@@ -29,8 +29,8 @@ class Settings(BaseSettings):
     # EMAILS_FROM_EMAIL: Optional[EmailStr] = None
     # EMAILS_FROM_NAME: Optional[str] = None
 
-    AWS_SECRET_KEY_ID: str = os.environ['AWS_SECRET_KEY_ID']
-    AWS_SECRET_ACCESS_KEY: str = os.environ['AWS_SECRET_ACCESS_KEY']
+    # AWS_SECRET_KEY_ID: str = os.environ['AWS_SECRET_KEY_ID']
+    # AWS_SECRET_ACCESS_KEY: str = os.environ['AWS_SECRET_ACCESS_KEY']
 
     # EMAIL_TEMPLATES_DIR: str = ""
 
