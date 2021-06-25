@@ -43,10 +43,7 @@ class BaseCrud:
         if user:
             db.delete(user)
             db.commit()
-            user_check = db.query(self.__model).filter(self.__model.id == _id).first()
-            if not user_check:
-                return True
-            return False
+            return True
         return False
 
     def update_user(self, db: Session, db_obj: ModelType, usup: Any, image_keys: Optional[List[str]] = None,
